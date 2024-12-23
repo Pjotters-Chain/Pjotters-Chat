@@ -194,3 +194,27 @@ footer {
     height: auto;
     margin-right: 20px;
 }
+
+.divider {
+    text-align: center;
+    margin: 20px 0; /* Ruimte boven en onder de divider */
+    position: relative;
+}
+
+.divider span {
+    background: #f0f8ff; /* Achtergrondkleur van de tekst */
+    padding: 10px 20px; /* Opvulling rond de tekst */
+    position: relative;
+    z-index: 1; /* Zorgt ervoor dat de tekst boven de lijn staat */
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px; /* Dikte van de lijn */
+    background: #007bff; /* Kleur van de lijn */
+    z-index: 0; /* Zorgt ervoor dat de lijn onder de tekst staat */
+}
