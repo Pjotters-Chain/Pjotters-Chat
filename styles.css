@@ -2,11 +2,11 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f4f8;
+    background-color: #e9f5ff;
 }
 
 header {
-    background: linear-gradient(135deg, #007bff, #0056b3);
+    background: linear-gradient(135deg, #6ec1e4, #4a9bdc);
     color: white;
     padding: 40px;
     text-align: center;
@@ -66,7 +66,7 @@ li {
 
 .download-link, .shop-button {
     display: inline-block;
-    background: #28a745;
+    background: #98d8e1;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -75,7 +75,7 @@ li {
 }
 
 .download-link:hover, .shop-button:hover {
-    background: #218838;
+    background: #76c6d8;
 }
 
 footer {
@@ -106,12 +106,12 @@ footer {
     transform: translate(-50%, -50%);
     color: white;
     font-size: 2.5em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .shop-link {
-    background: #f8f9fa;
-    border: 1px solid #dee2e6;
+    background: #f0f8ff;
+    border: 1px solid #b0e0e6;
     border-radius: 8px;
     padding: 20px;
     text-align: center;
@@ -120,11 +120,29 @@ footer {
 }
 
 .image-gallery {
-    background: #f8f9fa;
+    background: #f0f8ff;
     padding: 20px;
     border-radius: 8px;
     margin: 20px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .gallery {
@@ -134,7 +152,7 @@ footer {
 }
 
 .gallery-item {
-    flex: 1 1 calc(30% - 20px); /* Drie items per rij met ruimte */
+    flex: 1 1 calc(30% - 20px);
     margin: 10px;
     text-align: center;
 }
@@ -160,7 +178,4 @@ footer {
 .pjotters-musics p {
     line-height: 1.6;
     color: #333;
-}
-    margin: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
