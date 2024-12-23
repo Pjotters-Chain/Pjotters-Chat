@@ -23,7 +23,10 @@
         </section>
         <section class="features">
             <h2>Waarom Pjotters-Chat?</h2>
-            <p>Pjotters-Chat biedt een veilige en privé omgeving voor al je gesprekken.</p>
+            <div class="features-container">
+                <img id="feature-image" src="images/Simulator Screenshot - iPhone 16 Pro - 2024-12-23 at 22.20.08.png" alt="Pjotters-Chat Feature" class="feature-image">
+                <p>Pjotters-Chat biedt een veilige en privé omgeving voor al je gesprekken.</p>
+            </div>
         </section>
         <section class="features">
             <h2>Kenmerken</h2>
@@ -160,6 +163,25 @@
         // Start de carrousel
         showSlide(currentSlide);
         setInterval(nextSlide, 5000); // Verander elke 5 seconden
+    </script>
+
+    <script>
+        const images = [
+            "images/Simulator Screenshot - iPhone 16 Pro - 2024-12-23 at 22.20.08.png",
+            "images/Simulator Screenshot - iPhone 16 Pro - 2024-12-23 at 22.19.07.png",
+            "images/Simulator Screenshot - iPhone 16 Pro - 2024-12-23 at 22.19.04.png",
+            "images/Simulator Screenshot - iPhone 16 Pro - 2024-12-23 at 22.18.37.png"
+        ];
+
+        let currentImageIndex = 0;
+
+        function changeImage() {
+            const imageElement = document.getElementById('feature-image');
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            imageElement.src = images[currentImageIndex];
+        }
+
+        setInterval(changeImage, 3000); // Verander elke 3 seconden
     </script>
 </body>
 </html>
