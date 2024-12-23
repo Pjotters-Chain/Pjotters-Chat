@@ -179,3 +179,14 @@ footer {
     line-height: 1.6;
     color: #333;
 }
+
+.features-container {
+    display: flex;
+    align-items: center;
+}
+
+.feature-image {
+    width: 200px; /* Pas de breedte aan zoals nodig */
+    height: auto;
+    margin-right: 20px; /* Ruimte tussen afbeelding en tekst */
+}
