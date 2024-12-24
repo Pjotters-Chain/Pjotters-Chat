@@ -72,14 +72,17 @@ li {
     display: inline-block;
     background: #98d8e1;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 15px 30px;
+    border-radius: 25px;
     text-decoration: none;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
+    font-weight: bold;
+    margin: 1rem 0;
 }
 
 .download-link:hover, .shop-button:hover {
     background: #76c6d8;
+    transform: scale(1.05);
 }
 
 footer {
@@ -169,6 +172,11 @@ footer {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
 }
 
 .pjotters-musics {
@@ -191,25 +199,30 @@ footer {
 .features-container {
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
 .feature-image {
     width: 200px;
     height: auto;
     margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .divider {
     text-align: center;
-    margin: 20px 0; /* Ruimte boven en onder de divider */
+    margin: 40px 0;
     position: relative;
 }
 
 .divider span {
-    background: #f0f8ff; /* Achtergrondkleur van de tekst */
-    padding: 10px 20px; /* Opvulling rond de tekst */
+    background: #f0f8ff;
+    padding: 10px 20px;
     position: relative;
-    z-index: 1; /* Zorgt ervoor dat de tekst boven de lijn staat */
+    z-index: 1;
+    color: #007bff;
+    font-weight: bold;
 }
 
 .divider::before {
@@ -218,7 +231,62 @@ footer {
     top: 50%;
     left: 0;
     right: 0;
-    height: 1px; /* Dikte van de lijn */
-    background: #007bff; /* Kleur van de lijn */
-    z-index: 0; /* Zorgt ervoor dat de lijn onder de tekst staat */
+    height: 1px;
+    background: #007bff;
+    z-index: 0;
+}
+
+.download {
+    text-align: center;
+    padding: 2rem;
+    background: #f5f5f7;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.download-note {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.download-instructions {
+    text-align: left;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.download-instructions ol {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.download-instructions li {
+    margin: 0.5rem 0;
+    background: none;
+    padding: 0;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .features-container {
+        flex-direction: column;
+    }
+    
+    .feature-image {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .hero-text {
+        font-size: 1.8em;
+    }
+    
+    .gallery-item {
+        flex: 1 1 100%;
+    }
 }
